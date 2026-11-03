@@ -167,6 +167,9 @@ section { padding-block: clamp(72px, 11vw, 128px); position: relative; }
 .plan-featured::before { content: "おすすめ"; position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: var(--accent); color: #fff; font-size: 0.78rem; padding: 2px 16px; border-radius: 999px; letter-spacing: 0.12em; white-space: nowrap; }
 
 .checkout { margin-top: clamp(40px, 6vw, 64px); padding: clamp(28px, 5vw, 44px); background: var(--sheet); border-radius: var(--r-lg); box-shadow: var(--shadow); }
+.pay { margin-top: clamp(28px, 5vw, 40px); padding-top: clamp(24px, 4vw, 32px); border-top: 2px dashed var(--rule); display: grid; gap: 12px; }
+.pay-note { color: var(--ink-soft); font-size: 0.95rem; max-width: 40em; }
+.pay-table { background: var(--paper); border-radius: var(--r-md); padding: clamp(8px, 2vw, 16px); min-height: 120px; }
 .options { margin-top: 28px; overflow-x: auto; background: var(--sheet); border-radius: var(--r-lg); padding: 20px clamp(16px, 3vw, 28px); }
 table { border-collapse: collapse; width: 100%; font-size: 0.92rem; }
 th, td { text-align: left; padding: 12px 10px; border-bottom: 1px dashed var(--rule); vertical-align: top; }
@@ -372,6 +375,16 @@ footer a { margin-right: 10px; }
           <p>お申し込みはThreadsのメッセージで承ります。ご希望のプラン名をお送りください。折り返し、事前アンケートとお支払いのリンクをお送りします。お支払いとアンケートの完了を確認してから制作を始めます。</p>
         </div>
         <a class="btn btn-solid" href="https://www.threads.com/@yudai_1002" target="_blank" rel="noopener">Threadsのメッセージで申し込む</a>
+        <div class="pay">
+          <p class="eyebrow">Payment</p>
+          <p class="pay-note">お支払いは、こちらの料金表からも手続きいただけます（クレジットカード・Stripe）。お支払いのあとは、Threadsのメッセージでお名前とプランをお知らせください。事前アンケートをお送りします。</p>
+          <div class="pay-table">
+            <script async src="https://js.stripe.com/v3/pricing-table.js"></script>
+            <stripe-pricing-table pricing-table-id="prctbl_1UXI0X2KLFj1vPrAVF898hqB"
+              publishable-key="pk_live_51UXHfF2KLFj1vPrAFAyb78WSsUOZrAAajjcVKmyELqxflQTv8W1l6aVTH7FdDWwAm9VDwZ0UZIRTGYrESSneWXKj00g3sPwOqK">
+            </stripe-pricing-table>
+          </div>
+        </div>
       </div>
 
       <div class="options">
