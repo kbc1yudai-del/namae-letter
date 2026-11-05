@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow">
+<title>大河へのナマエレター</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500&family=Shippori+Mincho:wght@500&display=swap">
+<style>
+/* layout: one quiet column, like opening an envelope; the film is the letter */
+:root{
+  --paper:#fbf6ee; --ink:#4a3f37; --soft:#8a7b70; --blush:#f3dcdc; --rule:#e6d8c8; --frame:#ffffff;
+  --display:"Shippori Mincho","Hiragino Mincho ProN","Yu Mincho",serif;
+  --body:"Zen Maru Gothic","Hiragino Maru Gothic ProN","Hiragino Sans",sans-serif;
+  color-scheme:light;
+}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);line-height:1.9;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:40px 56px}
+main{max-width:860px;margin:0 auto;display:flex;flex-direction:column;gap:28px;align-items:center;text-align:center}
+.brand{font-size:12px;letter-spacing:.32em;color:var(--soft)}
+h1{font-family:var(--display);font-weight:500;font-size:clamp(30px,6vw,44px);letter-spacing:.12em;margin:0;text-wrap:balance}
+.lead{margin:0;color:var(--soft);font-size:15px}
+.film{width:100%;background:var(--frame);padding:10px;border-radius:14px;box-shadow:0 10px 40px -18px rgba(74,63,55,.35)}
+video{display:block;width:100%;aspect-ratio:16/9;max-width:100%;border-radius:8px;background:#2a221d}
+.note{max-width:34em;font-size:14px;color:var(--ink);background:var(--blush);border-radius:12px;padding:16px 20px;text-align:left}
+.note p{margin:0}
+.note p+p{margin-top:6px}
+button{font:inherit;font-size:15px;color:var(--ink);background:var(--frame);border:1px solid var(--rule);border-radius:999px;padding:10px 26px;cursor:pointer}
+button:focus-visible{outline:2px solid var(--soft);outline-offset:2px}
+.status{font-size:13px;color:var(--soft);min-height:1.5em;margin:-16px 0 0}
+footer{font-size:12px;color:var(--soft);border-top:1px solid var(--rule);padding-top:16px;width:100%}
+a{color:var(--ink)}
+</style></head><body>
+<main>
+  <div class="brand">NAMAE LETTER</div>
+  <h1>大河へ</h1>
+  <p class="lead">きみの名前に込めた想いを、一本の動画にしました。</p>
+  <div class="film">
+    <video id="film" controls playsinline preload="metadata" src="taiga.mp4"></video>
+  </div>
+    <div class="note">
+    <p>この動画は、お届けから1か月（2026年12月5日まで）ご覧いただけます。</p>
+    <p>大切な記録として、期限までにお手元の端末やクラウドに保存してください。</p>
+    <p><a href="taiga.mp4" download="taiga_namae_letter.mp4">動画ファイルを保存する</a></p>
+  </div>
+  <footer>Music: original piano (Salamander Grand Piano by Alexander Holm, CC BY 3.0)</footer>
+</main>
+
+</body></html>
